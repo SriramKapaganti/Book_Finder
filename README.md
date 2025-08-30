@@ -66,6 +66,7 @@ book-finder/
 
 # https://openlibrary.org/search.json?q=${searchInput}
 
+# Debounce: API calls are delayed using a timer to optimize performance.
 
 # Loader shows while fetching, then results are displayed dynamically.
 
