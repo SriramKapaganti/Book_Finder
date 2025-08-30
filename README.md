@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+## Book Finder App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and responsive React.js application to search for books in real-time using the Open Library API. The app allows users to type a book name and instantly fetch results with a clean and modern UI powered by Tailwind CSS.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+# Real-time Book Search – Search as you type with live results.
 
-### `npm start`
+# Responsive Design – Works seamlessly on mobile and desktop.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Styled with Tailwind CSS – Clean and modern UI.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# React Functional Components & Hooks – Built with useState, useEffect, and useContext.
 
-### `npm test`
+# Context API – Used for managing global search state.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Loading State with Animated Loader – Displays a spinner while fetching data.
 
-### `npm run build`
+# Book Details with Images – Displays title, author, and cover image.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies & Dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React (V18.2.0)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Tailwind CSS (v3)
 
-### `npm run eject`
+React Icons
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Open Library API
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Context API for state management
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+book-finder/
+│
+├── src/
+│   ├── components/
+│   │   ├── Header/
+│   │   │   └── NavBar.js
+│   │   ├── Loader/
+│   │   │   └── Loader.js
+│   │   ├── SearchContext.js
+│   |   ├── Home.js
+│   │   
+│   │
+│   |
+│   │   
+│   │
+│   ├── App.js
+│   ├── index.css
+│   └── index.js
+├── postcss.config.js
+├── tailwind.config.js
+├── package.json
+└── README.md
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## How It Works
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# User enters a search term in the input field.
 
-### Code Splitting
+# The NavBar component updates the global state via Context API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Home.js listens for the searchInput change and fetches data from Open Library API:
 
-### Analyzing the Bundle Size
+# https://openlibrary.org/search.json?q=${searchInput}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+# Loader shows while fetching, then results are displayed dynamically.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
